@@ -56,7 +56,7 @@ In this part, we'll clone the repo, update Cocoapods, and update the AppDelagate
 5. Build and run the app 
 
 ## Requirements
-- [Cocoapods](https://github.com/CocoaPods/CocoaPods) 1.2.0 +
+- [Cocoapods](https://github.com/CocoaPods/CocoaPods) 1.5.0 +
 - iOS 10.2+ / Mac OS X 10.13+
 - Xcode 9.0+
 
