@@ -12,10 +12,10 @@ Of all the AWS services, Amazon Translate is by far the easiest to implement int
 
 ![Architectural Diagram](https://s3-us-west-2.amazonaws.com/mobilequickie/speechtranslator/speech-polly-diagram-noLambda.png "Speech Translator Architecture")
 
-There are two easy steps to building this solution: 1. **Configure backend** by creating an Amazon Cognito Identity Pool, IAM Role(s), and adding permission to those roles for accessing Amazon Translate and Polly directly from a mobile app. 2. **Create a mobile app** to showcase natural language processing by cloning my sample app from GitHub and configuring it to use the values created in step #1.
+There are two easy steps to building this solution: Part 1. **Configure backend** by creating an Amazon Cognito Identity Pool, IAM Role(s), and adding permission to those roles for accessing Amazon Translate and Polly directly from a mobile app. Part 2. **Create a mobile app** to showcase natural language processing by cloning my sample app from GitHub and configuring it to use the values created in step #1.
 
-## STEP 1: Configure Backend
-I created a CloudFormation Stack to automate the creation of the Cognito Identity Pool, IAM Roles, and permissions so we can start playing with the app! The other services do not require any backend configuration and will be called directly from our mobile app.
+## PART 1: Configure Backend
+I created a CloudFormation Stack to automate the creation of the Cognito Identity Pool, IAM Roles, and permissions so we can quickly start playing with the app! The other services do not require any backend configuration and will be called directly from our mobile app.
 
 1.	Click on the Launch Stack button
     
@@ -31,7 +31,9 @@ I created a CloudFormation Stack to automate the creation of the Cognito Identit
  ![Stack Output](https://s3-us-west-2.amazonaws.com/mobilequickie/speechtranslator/stack-output-final.png "CloudFormation Stack Output of Cognito Identity Pool details")
 8.	Copy the Value for each of the three resources as we’ll be pasting those values into our service config in the AppDelegate of our mobile app.
 
-## STEP 2: Mobile Client Setup
+## PART 2: Mobile Client Setup
+In this part, we'll clone the repo, update Cocoapods, and update the AppDelagate.swift file with your own backend Identity pool Id and IAM Roles generated in PART 1. 
+
 1. Download or clone this project
     ```
     $ git clone https://github.com/mobilequickie/AmazonSpeechTranslator.git
