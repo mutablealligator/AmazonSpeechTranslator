@@ -3,6 +3,11 @@
 
 This is a powerful, yet simple solution for demonstrating the power of machine learning on mobile using managed cloud services. The app provides speech recognition via Apple Speech API, text translation via Amazon Translate, and showcases speech synthesis using Amazon Polly to read back our translated text!
 
+<div align="center">
+<br>Watch the entire app unfold</br>
+  <a href="https://www.youtube.com/watch?v=nldFJABasqA"><img src="https://img.youtube.com/vi/nldFJABasqA/0.jpg" alt="YouTube - Mobile Quickie"></a>
+</div>
+
 |[Speech Recognition]()|[Translation]()|
 |:--:|:--:| 
 [![Recognition](https://s3-us-west-2.amazonaws.com/mobilequickie/speechtranslator/recognition-full.png)](https://s3-us-west-2.amazonaws.com/mobilequickie/speechtranslator/recognition-full.png)| [![Translation](https://s3-us-west-2.amazonaws.com/mobilequickie/speechtranslator/translation-full.png)](https://s3-us-west-2.amazonaws.com/mobilequickie/speechtranslator/translation-full.png) | 
