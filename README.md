@@ -20,13 +20,14 @@ Of all the AWS services, Amazon Translate is by far the easiest to implement int
 There are two easy steps to building this solution: Part 1. **Configure backend** by creating an Amazon Cognito Identity Pool, IAM Role(s), and adding permission to those roles for accessing Amazon Translate and Polly directly from a mobile app. Part 2. **Create a mobile app** to showcase natural language processing by cloning my sample app from GitHub and configuring it to use the values created in step #1.
 
 ## PART 1: Configure Backend (1 minute)
-I created a CloudFormation Stack to automate the creation of the Cognito Identity Pool, IAM Roles, and permissions so we can quickly start playing with the app! The other services do not require any backend configuration and will be called directly from our mobile app.
+I created a CloudFormation template to automate the creation of a Cognito Identity Pool, IAM Role(s), and permissions. The other services (Translate & Polly) do not require any backend configuration and will be called directly from our mobile app.
+Note: Creating a CloudFormation Stack to provision the above AWS resources is FREE.
 
 1.	Click on the Launch Stack button
     
     [![Launch Stack](https://s3-us-west-2.amazonaws.com/mobilequickie/speechtranslator/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=speechtranslator-stack&templateURL=https://s3-us-west-2.amazonaws.com/mobilequickie/speechtranslator/SpeechTranslator-CloudFormation-Cognito.yaml)
 
-    This will launch the AWS CloudFormation Console and automate the creation of a Cognitio Identity Pool, associated authenticate & authenticated IAM Roles along with policies for accessing Amazon Translate and Amazon Polly directly from a mobile app.
+    This will launch the AWS CloudFormation Console, passing in the template, create a new stack, and automate the creation of a Cognitio Identity Pool, associated authenticate & authenticated IAM Roles along with policies for accessing Amazon Translate and Amazon Polly directly from a mobile app.
 2.	Click **Next** on the Select Template page
 3.	Click **Next**
 4.	On the Options page, leave all the defaults and click **Next**
@@ -55,7 +56,7 @@ In this part, we'll clone the repo, update Cocoapods, and update the AppDelagate
     ```
     $ open SpeechRec.xcworkspace
     ``` 
-4. Update the AppDelegate.swift by pasting in your own identityPoolId, unauthRoleArn, and authRoleArn from the output tab of CloudFormation Stck that you created in Step #1
+4. Update the AppDelegate.swift by pasting in your own identityPoolId, unauthRoleArn, and authRoleArn from the output tab of CloudFormation Stack that you created in Part 1, step #7.
  ![Stack Output](https://s3-us-west-2.amazonaws.com/mobilequickie/speechtranslator/appdelegate-stack-config.png "CloudFormation Stack Output of Cognito Identity Pool details")
 
 5. Build and run the app 
